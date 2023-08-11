@@ -1,0 +1,24 @@
+{
+  "name": "todo-project",
+  "version": "1.0.0",
+  "description": "theodinproject Advanced Javascript project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developertarik/Todo-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developertarik/Todo-Project/issues"
+  },
+  "homepage": "https://github.com/developertarik/Todo-Project#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

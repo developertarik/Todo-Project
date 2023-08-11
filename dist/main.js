@@ -1,0 +1,1 @@
+document.getElementById("btn").addEventListener("click",(function(){const n=prompt("Başlık nedir? "),e=prompt("Açıklama nedir ? "),t=prompt("tarihi nedir?"),i=prompt("Önceliği nedir?");console.log(n,e,t,i)}));
