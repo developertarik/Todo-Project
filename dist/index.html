@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=s, initial-scale=1.0">
-    <title>To-Do</title>
+    <title>i can't focus </title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <script src="../src/index.js" defer></script>
-    <div id="todo"></div>
-    <button id="btn">Add task</button>
+    <div id="todo">
+        <h1>i can't focus</h1>
+        <div>
+            <form id="form" action="">
+                <legend>title</legend>
+                <input type="text" id="title">
+
+                <legend>Date</legend>
+                <input type="datetime" name="date" id="date">
+
+                <legend>Priority</legend>
+                <select name="priority" id="priority">
+                    <option value="none">Select a option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </form>
+            <button id="btn">Add task</button>
+
+        </div>
+    </div>
 </body>
 </html>

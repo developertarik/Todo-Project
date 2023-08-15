@@ -11,25 +11,23 @@ function Todo(title,description,dueDate,priority){
  
 const div2 = document.createElement("div");
 const analog = document.getElementById("todo");
+const header = document.createElement("h1");
+const form  = document.getElementById("form")
+
 
 
 function addTask(){
-    const titlePrompt = prompt("Başlık nedir? ");
-    const descPrompt = prompt("Açıklama nedir ? ");
-    const dueDatePrompt = prompt("tarihi nedir?");
-    const priorityPrompt = prompt("Önceliği nedir?");
-    const checkboxBtn = document.createElement("input");
-    checkboxBtn.setAttribute("type","checkbox");
-    
-console.log(titlePrompt,descPrompt,dueDatePrompt,priorityPrompt);
-    div2.innerHTML += titlePrompt
-    div2.appendChild(checkboxBtn);    
-    analog.appendChild(div2)
+     
+    console.log(title,date,priority);
+    div2.innerHTML += title.innerText +date+priority
+     analog.appendChild(div2)
 }
 
 const button = document.getElementById("btn");
 button.addEventListener("click",addTask);
+  
 
+analog.appendChild(div2)
 //delete todo
 // change
 // add
@@ -41,7 +39,19 @@ function completeTask(){
 function changePriority(){
     
 }
-
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    title = document.getElementById("title").value
+    date = document.getElementById("date").value
+    priority = document.getElementById("priority").value
+    newTask = new Todo(title,date,priority);
+    console.log(newTask.title)
+    
+     title = document.getElementById("title").value = ""
+    date = document.getElementById("date").value = ""
+    priority = document.getElementById("priority").value = ""
+    addTask()
+    }); 
 
 function deleteTask(checkboxBtn,titlePrompt){
     checkboxBtn.addEventListener("click",()=>{
