@@ -9,26 +9,52 @@ function Todo(title,description,dueDate,priority){
 // ve ekliyoruz
 // restoran projesi ile books un bir karışımı olacak
  
+const div2 = document.createElement("div");
+const analog = document.getElementById("todo");
+
 
 function addTask(){
     const titlePrompt = prompt("Başlık nedir? ");
     const descPrompt = prompt("Açıklama nedir ? ");
     const dueDatePrompt = prompt("tarihi nedir?");
     const priorityPrompt = prompt("Önceliği nedir?");
-    console.log(titlePrompt,descPrompt,dueDatePrompt,priorityPrompt);
+    const checkboxBtn = document.createElement("input");
+    checkboxBtn.setAttribute("type","checkbox");
+    
+console.log(titlePrompt,descPrompt,dueDatePrompt,priorityPrompt);
+    div2.innerHTML += titlePrompt
+    div2.appendChild(checkboxBtn);    
+    analog.appendChild(div2)
 }
 
 const button = document.getElementById("btn");
 button.addEventListener("click",addTask);
 
-
+//delete todo
+// change
+// add
 function completeTask(){
+        // tıklayınca üzeri çizilsin yada yokolsun
 
 }
 
 function changePriority(){
     
 }
+
+
+function deleteTask(checkboxBtn,titlePrompt){
+    checkboxBtn.addEventListener("click",()=>{
+        analog.removeChild(div2)
+    })
+}
+
+
+
+
+
+
+
 
  // //add todo
 // function addTodo( ){
