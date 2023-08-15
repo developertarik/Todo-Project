@@ -18,9 +18,9 @@ const form  = document.getElementById("form")
 
 function addTask(){
      
-    console.log(title,date,priority);
-    div2.innerHTML += title.innerText +date+priority
-     analog.appendChild(div2)
+    console.log(title.innerText,date,priority);
+    div2.innerHTML += "<p class='b'>" + newTask.title +"</p>" + "<p class='b'>" + newTask.date +"</p>" + "Pages:"+ newTask.priority;
+    analog.appendChild(div2)
 }
 
 const button = document.getElementById("btn");
@@ -47,7 +47,7 @@ form.addEventListener("submit",(e)=>{
     newTask = new Todo(title,date,priority);
     console.log(newTask.title)
     
-     title = document.getElementById("title").value = ""
+    title = document.getElementById("title").value = ""
     date = document.getElementById("date").value = ""
     priority = document.getElementById("priority").value = ""
     addTask()
