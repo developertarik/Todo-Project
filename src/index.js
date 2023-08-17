@@ -21,11 +21,12 @@ const button = document.getElementById("btn");
 function addTask() {
       
    newTask = new Todo(title,date,priority);
-
+    console.log(newTask.value)
     analog.appendChild(div2)
     console.log(title.innerText,date,priority);
-    div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date +"</p>" + "Pages:"+ newTask.priority;
-    analog.appendChild(div2)
+            // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
+        div2.innerHTML += "<br>" +newTask.title.value
+        analog.appendChild(div2)
 }
 button.addEventListener("click",addTask);
 
