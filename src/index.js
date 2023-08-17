@@ -12,67 +12,56 @@ function Todo(title,description,dueDate,priority){
 const div2 = document.createElement("div");
 const analog = document.getElementById("todo");
 const header = document.createElement("h1");
-const form  = document.getElementById("form")
+const form  = document.getElementById("form");
+const button = document.getElementById("btn");
+
+ 
 
 
+function addTask() {
+      
+   newTask = new Todo(title,date,priority);
 
-function addTask(){
-     
+    analog.appendChild(div2)
     console.log(title.innerText,date,priority);
-    div2.innerHTML += "<p class='b'>" + newTask.title +"</p>" + "<p class='b'>" + newTask.date +"</p>" + "Pages:"+ newTask.priority;
+    div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date +"</p>" + "Pages:"+ newTask.priority;
     analog.appendChild(div2)
 }
-
-const button = document.getElementById("btn");
 button.addEventListener("click",addTask);
-  
-
-analog.appendChild(div2)
-//delete todo
-// change
-// add
-function completeTask(){
-        // tıklayınca üzeri çizilsin yada yokolsun
-
-}
-
-function changePriority(){
-    
-}
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    title = document.getElementById("title").value
-    date = document.getElementById("date").value
-    priority = document.getElementById("priority").value
-    newTask = new Todo(title,date,priority);
-    console.log(newTask.title)
-    
-    title = document.getElementById("title").value = ""
-    date = document.getElementById("date").value = ""
-    priority = document.getElementById("priority").value = ""
-    addTask()
-    }); 
-
-function deleteTask(checkboxBtn,titlePrompt){
-    checkboxBtn.addEventListener("click",()=>{
-        analog.removeChild(div2)
-    })
-}
 
 
+// //delete todo
+// // change
+// // add
+// function completeTask(){
+//         // tıklayınca üzeri çizilsin yada yokolsun
 
-
-
-
-
-
- // //add todo
-// function addTodo( ){
-//     const tasks = [];
-//     const tasksA = prompt("Görev ne ekliyim?");
-
-//     analog.innerText = tasksA;
 // }
-// addTodo(analog);
-    //todo okay
-//todo change
+
+// function changePriority(){
+    
+// }
+  form.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      title = document.getElementById("title").value
+     date = document.getElementById("date").value
+      priority = document.getElementById("priority").value
+      console.log(newTask.title)
+    
+      title = document.getElementById("title").value = ""
+      date = document.getElementById("date").value = ""
+      priority = document.getElementById("priority").value = ""
+     addTask(button)
+      }); 
+
+// function deleteTask(checkboxBtn){
+//     checkboxBtn.addEventListener("click",()=>{
+//         analog.removeChild(div2)
+//     })
+// }
+
+
+
+
+
+ 
