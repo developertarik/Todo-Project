@@ -10,6 +10,9 @@ function Todo(title,description,dueDate,priority){
 // restoran projesi ile books un bir karışımı olacak
  
 const div2 = document.createElement("div");
+const container = document.getElementById("container");
+const newheader = document.createElement("h1");
+newheader.innerText = "Tasks:";
 const analog = document.getElementById("todo");
 const header = document.createElement("h1");
 const form  = document.getElementById("form");
@@ -20,12 +23,12 @@ const button = document.getElementById("btn");
 function addTask() {
       
    newTask = new Todo(title,date,priority);
-   const box = document.createElement("box")
+   const box = document.createElement("div")
     box.classList.add("box")
      analog.appendChild(div2)
     console.log(title.value,date.value,priority.value);
              // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
-        box.innerHTML += title.value+date.value+priority.value 
+        box.innerHTML += title.value+"<br>"+date.value+ "<br>"+priority.value 
 
         analog.appendChild(div2)
         form.addEventListener("submit",(e)=>{
@@ -39,8 +42,9 @@ function addTask() {
             date = document.getElementById("date").value = ""
             priority = document.getElementById("priority").value = ""
            addTask(button)
-            }); 
-      analog.appendChild(box)
+            });             container.appendChild(newheader)
+
+      container.appendChild(box)
 }
 button.addEventListener("click",addTask);
 
