@@ -25,7 +25,8 @@ function addTask() {
      analog.appendChild(div2)
     console.log(title.value,date.value,priority.value);
              // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
-        box.innerHTML += "<br>" +newTask.title.value 
+        box.innerHTML += title.value+date.value+priority.value 
+
         analog.appendChild(div2)
         form.addEventListener("submit",(e)=>{
             e.preventDefault();
