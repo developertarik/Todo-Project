@@ -14,19 +14,32 @@ const analog = document.getElementById("todo");
 const header = document.createElement("h1");
 const form  = document.getElementById("form");
 const button = document.getElementById("btn");
-
  
 
 
 function addTask() {
       
    newTask = new Todo(title,date,priority);
-    console.log(newTask.value)
-    analog.appendChild(div2)
-    console.log(title.innerText,date,priority);
-            // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
-        div2.innerHTML += "<br>" +newTask.title.value
+   const box = document.createElement("box")
+    box.classList.add("box")
+     analog.appendChild(div2)
+    console.log(title.value,date.value,priority.value);
+             // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
+        box.innerHTML += "<br>" +newTask.title.value 
         analog.appendChild(div2)
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            title = document.getElementById("title").value
+           date = document.getElementById("date").value
+            priority = document.getElementById("priority").value
+            console.log(newTask.title)
+          
+            title = document.getElementById("title").value = ""
+            date = document.getElementById("date").value = ""
+            priority = document.getElementById("priority").value = ""
+           addTask(button)
+            }); 
+      analog.appendChild(box)
 }
 button.addEventListener("click",addTask);
 
@@ -42,18 +55,6 @@ button.addEventListener("click",addTask);
 // function changePriority(){
     
 // }
-  form.addEventListener("submit",(e)=>{
-      e.preventDefault();
-      title = document.getElementById("title").value
-     date = document.getElementById("date").value
-      priority = document.getElementById("priority").value
-      console.log(newTask.title)
-    
-      title = document.getElementById("title").value = ""
-      date = document.getElementById("date").value = ""
-      priority = document.getElementById("priority").value = ""
-     addTask(button)
-      }); 
 
 // function deleteTask(checkboxBtn){
 //     checkboxBtn.addEventListener("click",()=>{
