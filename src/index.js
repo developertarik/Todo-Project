@@ -11,13 +11,14 @@ function Todo(title,description,dueDate,priority){
  
 const div2 = document.createElement("div");
 const container = document.getElementById("container");
-const newheader = document.createElement("h1");
+const newheader = document.createElement("p");
 newheader.innerText = "Tasks:";
 const analog = document.getElementById("todo");
 const header = document.createElement("h1");
 const form  = document.getElementById("form");
 const button = document.getElementById("btn");
- 
+ const checkbox = document.createElement("input");
+ checkbox.setAttribute("type","checkbox");
 
 
 function addTask() {
@@ -28,8 +29,11 @@ function addTask() {
      analog.appendChild(div2)
     console.log(title.value,date.value,priority.value);
              // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
-        box.innerHTML += title.value+"<br>"+date.value+ "<br>"+priority.value 
-
+        box.innerHTML += title.value+"<br>"+date.value+ "<br>"+priority.value
+        checkbox.addEventListener("click",()=>{
+            box.innerHTML = "";
+            
+        })
         analog.appendChild(div2)
         form.addEventListener("submit",(e)=>{
             e.preventDefault();
@@ -43,7 +47,7 @@ function addTask() {
             priority = document.getElementById("priority").value = ""
            addTask(button)
             });             container.appendChild(newheader)
-
+            box.appendChild(checkbox)
       container.appendChild(box)
 }
 button.addEventListener("click",addTask);

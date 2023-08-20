@@ -5,17 +5,19 @@
     align-items: center 
 }
 .box{
-    width: 15%;
-    height: 10%;
+    width: 25%;
+    height: 5%;
     color: black;
     background-color: yellowgreen;
     padding: 20px;
 }
-.container{
+#container{
     display:flex;
     flex-direction: column;
     gap:50px;
     padding: 5%;
+    border: 1px solid black;
+    padding: 100px;
 }
 .header{
     color: white;
