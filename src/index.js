@@ -51,41 +51,9 @@ titleInput.addEventListener("keydown", function(event) {
         button.click();
     }
 });
-// checkbox tıklayınca kapat 
-// kutunun üstüne tıklayınca kutunun içini göster yani ayarla o kadrını da artık
-
-// //delete todo
-// // change
-// // add
-// function completeTask(){
-//         // tıklayınca üzeri çizilsin yada yokolsun
-
-// }
-
-// function changePriority(){
-    
-// }
-
-// function deleteTask(checkboxBtn){
-//     checkboxBtn.addEventListener("click",()=>{
-//         analog.removeChild(div2)
-//     })
-// }
-
-
-
-
-
  
- // form.addEventListener("submit",(e)=>{
-        //     e.preventDefault();
-        //     title = document.getElementById("title").value
-        //    date = document.getElementById("date").value
-        //     priority = document.getElementById("priority").value
-        //     console.log(newTask.title)
-          
-        //     title = document.getElementById("title").value = ""
-        //     date = document.getElementById("date").value = ""
-        //     priority = document.getElementById("priority").value = ""
-        //    addTask(button)
-        //     });
+
+
+
+
+  
