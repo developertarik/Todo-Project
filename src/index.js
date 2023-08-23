@@ -30,11 +30,11 @@ function addTask() {
   
 }
 button.addEventListener("click",function(){
-    newTask = new Todo(title,date,priority);
+    newTask = new Todo(title);
    const box = document.createElement("div")
     box.classList.add("box")
      analog.appendChild(div2)
-    console.log(title.value,date.value,priority.value);
+    console.log(title.value     );
          box.innerHTML += title.value
         box.appendChild(checkbox)
          analog.appendChild(div2)

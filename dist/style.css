@@ -25,6 +25,9 @@
     gap: 20px;
 }
 .inbox{
-    display:flex;
-    flex-direction: row;
-}
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+}   
+    
