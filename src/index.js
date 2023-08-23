@@ -17,41 +17,42 @@ const analog = document.getElementById("todo");
 const header = document.createElement("h1");
 const form  = document.getElementById("form");
 const button = document.getElementById("btn");
+const titleInput = document.getElementById("title")
  const checkbox = document.createElement("input");
+ const a = document.createElement("a")
  checkbox.setAttribute("type","checkbox");
+ 
 
 
 function addTask() {
       
-   newTask = new Todo(title,date,priority);
+   
+  
+}
+button.addEventListener("click",function(){
+    newTask = new Todo(title,date,priority);
    const box = document.createElement("div")
     box.classList.add("box")
      analog.appendChild(div2)
     console.log(title.value,date.value,priority.value);
-             // div2.innerHTML += "<p class='b'>" + newTask.title.value +"</p>" + "<p class='b'>" + newTask.date   +"</p>" + "Pages:"+ newTask.priority;
-        box.innerHTML += title.value+"<br>"+date.value+ "<br>"+priority.value
-        checkbox.addEventListener("click",()=>{
-            box.innerHTML = "";
-            
-        })
-        analog.appendChild(div2)
-        form.addEventListener("submit",(e)=>{
-            e.preventDefault();
-            title = document.getElementById("title").value
-           date = document.getElementById("date").value
-            priority = document.getElementById("priority").value
-            console.log(newTask.title)
-          
-            title = document.getElementById("title").value = ""
-            date = document.getElementById("date").value = ""
-            priority = document.getElementById("priority").value = ""
-           addTask(button)
-            });             container.appendChild(newheader)
-            box.appendChild(checkbox)
+         box.innerHTML += title.value
+        box.appendChild(checkbox)
+         analog.appendChild(div2)
+                    container.appendChild(newheader)
       container.appendChild(box)
-}
-button.addEventListener("click",addTask);
+      box.innerHTML += a.value
+    
+    titleInput.value = "";
 
+});
+titleInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        button.click();
+    }
+});
+// checkbox tıklayınca kapat 
+// kutunun üstüne tıklayınca kutunun içini göster yani ayarla o kadrını da artık
 
 // //delete todo
 // // change
@@ -76,3 +77,15 @@ button.addEventListener("click",addTask);
 
 
  
+ // form.addEventListener("submit",(e)=>{
+        //     e.preventDefault();
+        //     title = document.getElementById("title").value
+        //    date = document.getElementById("date").value
+        //     priority = document.getElementById("priority").value
+        //     console.log(newTask.title)
+          
+        //     title = document.getElementById("title").value = ""
+        //     date = document.getElementById("date").value = ""
+        //     priority = document.getElementById("priority").value = ""
+        //    addTask(button)
+        //     });
