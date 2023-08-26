@@ -11,8 +11,7 @@ function Todo(title,description,dueDate,priority){
  
 const div2 = document.createElement("div");
 const container = document.getElementById("container");
-const newheader = document.createElement("p");
-newheader.innerText = "Tasks:";
+ 
 const analog = document.getElementById("todo");
 const header = document.createElement("h1");
 const form  = document.getElementById("form");
@@ -41,8 +40,7 @@ function addTask() {
     
              box.innerHTML +=   "<p>" +title.value + "</p>"  
              analog.appendChild(div2)
-             container.appendChild(newheader)
-          container.appendChild(box)
+           container.appendChild(box)
          
         titleInput.value = "";
     
@@ -53,12 +51,9 @@ function addTask() {
             button.click();
         }
     });
-     function remove( ) {
-        this.parentNode.parentNode.removeChild(this.parentNode);
-      }
-     
-      checkbox.addEventListener("click",()=>{
-    
+      
+      checkbox.addEventListener("click",(box)=>{
+        box.remove();
       });
   
 }

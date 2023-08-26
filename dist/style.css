@@ -9,26 +9,42 @@
     color: white;
     background-color: #040D12;
  }
+body{
+    background-color: gainsboro;
+}
+.todo-header{
+    line-height: 10px;
+}
 #container{
     display:flex;
     flex-direction: column;
     gap: 5px;
      border: 1px solid #183D3D;
  }
+input{
+    background-color: black;
+    color: beige;
+}
 .header{
+  
     color: black;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
 }
+
+
+ 
 .inbox{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;
     text-align: center;
-}   
-.check::after{
+    align-items: flex-end;
+}
     
+.check::after{
+
 }
