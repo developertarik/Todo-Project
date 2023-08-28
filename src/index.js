@@ -20,10 +20,10 @@ checkbox.setAttribute("type", "checkbox");
 checkbox.classList.add("delete-checkbox");
 const dat = document.createElement("input");
 dat.setAttribute("type", "date");
-function removeUrlBox(){
-    this.closest(".box").remove();
-}
-checkbox.addEventListener("click",removeUrlBox)
+ 
+checkbox.addEventListener("click",function(){
+    box.remove();
+})
 function addTask() {
   button.addEventListener("click", function () {
         newTask = new Todo(title);
