@@ -16,7 +16,7 @@ const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
 const checkbox = document.createElement("button");
 const a = document.createElement("a")
-checkbox.innerText = "Complete task! "
+checkbox.innerText = "Complete task!"
 checkbox.classList.add("delete-checkbox");
 const dat = document.createElement("input");
 dat.setAttribute("type", "date");
@@ -37,11 +37,13 @@ function addTask() {
          box.classList.add("box")
         analog.appendChild(div2)
         console.log(title.value);
-    
+
         box.appendChild(dat)
 
 
+        
         box.innerHTML += "<p>" + title.value + "</p>"
+
         analog.appendChild(div2)
         box.appendChild(checkbox)
 
