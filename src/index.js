@@ -16,7 +16,7 @@ const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
 const checkbox = document.createElement("button");
 const a = document.createElement("a")
-
+checkbox.innerText = "Complete task! "
 checkbox.classList.add("delete-checkbox");
 const dat = document.createElement("input");
 dat.setAttribute("type", "date");
@@ -24,6 +24,7 @@ dat.setAttribute("type", "date");
 function deleteTask( ){
     checkbox.addEventListener("click", function( ){   {
         this.parentNode.remove();
+        alert("tasks Deleted")
 
     } });
 
@@ -42,7 +43,7 @@ function addTask() {
 
         box.innerHTML += "<p>" + title.value + "</p>"
         analog.appendChild(div2)
-        container.appendChild(checkbox)
+        box.appendChild(checkbox)
 
         container.appendChild(box)
 
