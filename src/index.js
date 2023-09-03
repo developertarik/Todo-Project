@@ -15,24 +15,24 @@ const form = document.getElementById("form");
 const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
 const checkbox = document.createElement("button");
-const a = document.createElement("a")
+ const a = document.createElement("a")
 checkbox.innerText = "Complete task!"
 checkbox.classList.add("delete-checkbox");
 const dat = document.createElement("input");
 dat.setAttribute("type", "date");
  
 function deleteTask( ){
-    checkbox.addEventListener("click", function( ){   {
-        this.parentNode.remove();
-        alert("tasks Deleted")
+    checkbox.addEventListener("click", function( e){   {
+        console.log("Neolur sil ne olur")
+        e.target.parentElement.remove( );
 
-    } });
+    }  });
 
 }
 function addTask() {
   button.addEventListener("click", function () {
-        newTask = new Todo(title);
-        const box = document.createElement("div")
+        newTask = new Todo(title );
+        const box = document.createElement("li")
 
          box.classList.add("box")
         analog.appendChild(div2)
@@ -41,18 +41,18 @@ function addTask() {
         box.appendChild(dat)
 
 
-        
-        box.innerHTML += "<p>" + title.value + "</p>"
+
+        box.innerHTML += "<p>" + title.value + "</p>"  
+        box.appendChild(checkbox)
 
         analog.appendChild(div2)
-        box.appendChild(checkbox)
 
         container.appendChild(box)
 
         titleInput.value = "";
 
     });
-    
+
 
 }
 function changeTitle(){
