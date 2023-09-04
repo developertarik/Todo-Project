@@ -14,23 +14,13 @@ const header = document.createElement("h1");
 const form = document.getElementById("form");
 const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
-const checkbox = document.createElement("button");
  const a = document.createElement("a")
-checkbox.innerText = "Complete task!"
-checkbox.classList.add("delete-checkbox");
-const dat = document.createElement("input");
+ const dat = document.createElement("input");
 dat.setAttribute("type", "date");
- 
-function deleteTask( ){
-    checkbox.addEventListener("click", function( e){   {
-        console.log("Neolur sil ne olur")
-        e.target.parentElement.remove( );
-
-    }  });
-
-}
 function addTask() {
+  
   button.addEventListener("click", function () {
+  
         newTask = new Todo(title );
         const box = document.createElement("li")
 
@@ -43,8 +33,20 @@ function addTask() {
 
 
         box.innerHTML += "<p>" + title.value + "</p>"  
-        box.appendChild(checkbox)
+        
+          const checkbox = document.createElement("button");
 
+        checkbox.innerText = "Complete task!"
+        
+            checkbox.addEventListener("click",()=>{
+                box.remove();
+                checkbox.remove();
+        })  
+        
+        
+        box.appendChild(checkbox)
+ 
+ 
         analog.appendChild(div2)
 
         container.appendChild(box)
