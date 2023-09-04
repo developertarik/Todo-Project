@@ -32,7 +32,7 @@ function addTask() {
 
 
 
-        box.innerHTML += "<p>" + title.value + "</p>"  
+        box.innerHTML += "<p class=`myTitle`>" + title.value + "</p>"  
         
           const checkbox = document.createElement("button");
 
@@ -48,23 +48,22 @@ function addTask() {
  
  
         analog.appendChild(div2)
+        localStorage.setItem("contentDiv",box.innerHTML);
 
         container.appendChild(box)
 
         titleInput.value = "";
 
     });
-
-
-}
-function changeTitle(){
     titleInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             button.click();
         }
     });
+
+
 }
+ 
 addTask();
-deleteTask();
-changeTitle();
+  
