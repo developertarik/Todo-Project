@@ -1,3 +1,4 @@
+ import projects from "./projects";
 function Todo(title, description, dueDate, priority) {
     this.title = title;
     this.description = description;
@@ -14,7 +15,10 @@ const header = document.createElement("h1");
 const form = document.getElementById("form");
 const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
- const a = document.createElement("a")
+ const a = document.createElement("a");
+ const header1 = document.getElementById("inbox")
+ const projectsBtn = document.getElementById("projectsBtn")
+ const divProjects = document.getElementById("projectsDiv")
  const dat = document.createElement("input");
 dat.setAttribute("type", "date");
 function addTask() {
@@ -42,7 +46,7 @@ function addTask() {
                 box.remove();
                 checkbox.remove();
         })  
-        
+      
         
         box.appendChild(checkbox)
  
@@ -54,6 +58,7 @@ function addTask() {
 
         titleInput.value = "";
 
+    
     });
     titleInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {

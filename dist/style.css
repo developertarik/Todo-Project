@@ -57,3 +57,17 @@ input{
 .check::after{
 
 }
+#projectsDiv,.inbocx{
+    border: 1px solid red;
+     width: 10%;
+     gap:50px;
+     margin-bottom: 50px;
+   
+}
+#projectsBtn,.inboxBtn{
+    text-decoration: none;
+    list-style: none;   
+    color: black;
+
+}
+ 
