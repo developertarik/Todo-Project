@@ -1,5 +1,4 @@
- import projects from "./projects";
-function Todo(title, description, dueDate, priority) {
+ function Todo(title, description, dueDate, priority) {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -16,9 +15,8 @@ const form = document.getElementById("form");
 const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
  const a = document.createElement("a");
- const header1 = document.getElementById("inbox")
- const projectsBtn = document.getElementById("projectsBtn")
- const divProjects = document.getElementById("projectsDiv")
+  const projectsBtn = document.getElementById("projectsBtn")
+ const inboxBtn = document.getElementById("inboxBtn")
  const dat = document.createElement("input");
 dat.setAttribute("type", "date");
 function addTask() {
@@ -52,7 +50,7 @@ function addTask() {
  
  
         analog.appendChild(div2)
-        localStorage.setItem("contentDiv",box.innerHTML);
+        localStorage.setItem("contentDiv",container.innerHTML);
 
         container.appendChild(box)
 
@@ -60,6 +58,7 @@ function addTask() {
 
     
     });
+  
     titleInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
@@ -72,3 +71,13 @@ function addTask() {
  
 addTask();
   
+
+inboxBtn.addEventListener("click",()=>{
+    console.log("this page, come again inbox")
+})
+function addProject( ){
+    projectsBtn.addEventListener("click",()=>{
+        console.log("This page project ")
+    })
+}
+addProject();

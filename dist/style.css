@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
 
 }
 .box{
@@ -22,14 +23,15 @@ body{
     display: flex;
     flex-direction: column;
      gap: 5px;
-    border: 1px solid #183D3D;
+    border: 10px solid #183D3D;
     align-content: center;
     justify-content: center;
-    margin-left: 350px;
+    margin-left: 200px;
+    width: 50%;
+    height: 15%;
     align-items: center;
     margin-bottom: 50px;
-    margin-top: 50px;
- }
+  }
 input{
     background-color:white;
  }
@@ -61,13 +63,7 @@ input{
     border: 1px solid red;
      width: 10%;
      gap:50px;
-     margin-bottom: 50px;
+     margin-bottom: 10px;
    
-}
-#projectsBtn,.inboxBtn{
-    text-decoration: none;
-    list-style: none;   
-    color: black;
-
 }
  

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "theodinproject Advanced Javascript project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/developertarik/Todo-Project#readme",
   "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
