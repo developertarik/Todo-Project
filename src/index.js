@@ -75,9 +75,8 @@ addTask();
 inboxBtn.addEventListener("click",()=>{
     console.log("this page, come again inbox")
 })
-function addProject( ){
+ 
     projectsBtn.addEventListener("click",()=>{
-        console.log("This page project ")
-    })
-}
-addProject();
+      console.log("skada")    })
+ 
+ 
