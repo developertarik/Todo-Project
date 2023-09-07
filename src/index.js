@@ -78,10 +78,13 @@ inboxBtn.addEventListener("click",()=>{
 })
  
 function addProject() {
-    projectsBtn.addEventListener("click",()=>{
-        const newProject = document.createElement("li");
-        newProject.innerText = "My First Project"
-        projects.appendChild(newProject)
+    projectsBtn.addEventListener("click",()=>{ 
+
+    const projects2= document.createElement("li")
+    const projectsInput = document.getElementById("projectName")
+    projects2.innerHTML += "<p class=`myTitle`>" + projectsInput.value + "</p>"  
+
+         projects.appendChild(projectsInput)
     })
 }
 
