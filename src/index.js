@@ -15,6 +15,7 @@ const form = document.getElementById("form");
 const button = document.getElementById("btn");
 const titleInput = document.getElementById("title")
  const a = document.createElement("a");
+  const projects = document.getElementById("projectsDiv")
   const projectsBtn = document.getElementById("projectsBtn")
  const inboxBtn = document.getElementById("inboxBtn")
  const dat = document.createElement("input");
@@ -76,7 +77,12 @@ inboxBtn.addEventListener("click",()=>{
     console.log("this page, come again inbox")
 })
  
+function addProject() {
     projectsBtn.addEventListener("click",()=>{
-      console.log("skada")    })
- 
- 
+        const newProject = document.createElement("li");
+        newProject.innerText = "My First Project"
+        projects.appendChild(newProject)
+    })
+}
+
+addProject()
