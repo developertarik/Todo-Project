@@ -19,6 +19,8 @@ const projects = document.getElementById("projectsDiv")
 const projectsBtn = document.getElementById("projectsBtn")
 const inboxBtn = document.getElementById("inboxBtn")
 const dat = document.createElement("input");
+container.innerText = "Inbox"
+
 dat.setAttribute("type", "date");
 function addTask() {
 
@@ -71,19 +73,19 @@ addTask();
 
 
 inboxBtn.addEventListener("click", () => {
-    console.log("this page, come again inbox")
+    container.innerText = "Inbox"
 })
 
 function addProject() {
     const projects2 = document.createElement("li");
 
     projectsBtn.addEventListener("click", () => {
-
-        projects2.innerHTML = "<a href='#'>my Projects</a>"
+        const projectName = prompt("What is the project name ?")
+        projects2.innerHTML += "<a href='#'>"+ projectName + "</a>"+ "<br>"
         projects.appendChild(projects2)
     })
     projects2.addEventListener("click",()=>{
-         container.innerText= projects2.innerText
+         container.innerText = projects2.innerText
     })
 }
 
