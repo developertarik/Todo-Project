@@ -81,12 +81,21 @@ function addProject() {
 
     projectsBtn.addEventListener("click", () => {
         const projectName = prompt("What is the project name ?")
-        projects2.innerHTML += "<a href='#'>"+ projectName + "</a>"+ "<br>"
+        projects2.innerHTML += "<a href='#'>" + projectName + "</a>" + "<br>"
         projects.appendChild(projects2)
+        localStorage.setItem('project', projects2.innerHTML);
+        // Check for saved wishlist items
+      
+
     })
-    projects2.addEventListener("click",()=>{
-         container.innerText = projects2.innerText
+    projects2.addEventListener("click", () => {
+        container.innerText = projects2.innerText
     })
+    let saved = localStorage.getItem('project');
+    if (saved) {
+        projects2.innerHTML = saved;
+    }
 }
 
 addProject()
+
