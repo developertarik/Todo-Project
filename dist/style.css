@@ -63,6 +63,17 @@ input{
 .check::after{
 
 }
+.container-flex{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: center;
+}
+#projectsDiv{
+    display:flex;
+}
 #projectsDiv,.inbocx{
     border: 1px solid red;
      width: 10%;

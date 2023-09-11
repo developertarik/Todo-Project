@@ -88,13 +88,14 @@ function addProject() {
       
 
     })
+    let saved = localStorage.getItem('project');
+if (saved) {
+    projects2.innerHTML = saved;
+}
     projects2.addEventListener("click", () => {
         container.innerText = projects2.innerText
     })
-    let saved = localStorage.getItem('project');
-    if (saved) {
-        projects2.innerHTML = saved;
-    }
+ 
 }
 
 addProject()
