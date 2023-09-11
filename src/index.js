@@ -73,9 +73,9 @@ addTask();
 
 
 inboxBtn.addEventListener("click", () => {
-     container.innerHTML =      localStorage.getItem("Inbox",container.innerHTML);
+    container.innerText = "Inbox"
+    container.innerHTML =    localStorage.getItem("Inbox",container.innerHTML);
 
-    
 })
 
 function addProject() {
