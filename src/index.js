@@ -48,7 +48,7 @@ function addTask() {
 
         box.appendChild(checkbox)
 
-
+        localStorage.setItem("Inbox",container.innerHTML)
         analog.appendChild(div2)
         localStorage.setItem("contentDiv", container.innerHTML);
 
@@ -73,7 +73,9 @@ addTask();
 
 
 inboxBtn.addEventListener("click", () => {
-    container.innerText = "Inbox"
+     container.innerHTML =      localStorage.getItem("Inbox",container.innerHTML);
+
+    
 })
 
 function addProject() {
@@ -92,8 +94,8 @@ function addProject() {
 if (saved) {
     projects2.innerHTML = saved;
 }
-    projects2.addEventListener("click", () => {
-        container.innerText = projects2.innerText
+    projects2.addEventListener("click", (e) => {
+        container.innerText = e.innerText
     })
  
 }
