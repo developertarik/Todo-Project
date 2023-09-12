@@ -97,7 +97,7 @@ if (saved) {
 projects2.addEventListener("click",function(e){
     console.log("you clicked this element:",e.target)
     container.innerText = e.target.innerText;
-})
+  })
  
  
 }
