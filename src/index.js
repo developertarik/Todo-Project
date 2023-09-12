@@ -94,9 +94,11 @@ function addProject() {
 if (saved) {
     projects2.innerHTML = saved;
 }
-    projects2.addEventListener("click", (e) => {
-        container.innerText = e.innerText
-    })
+projects2.addEventListener("click",function(e){
+    console.log("you clicked this element:",e.target)
+    container.innerText = e.target.innerText;
+})
+ 
  
 }
 
