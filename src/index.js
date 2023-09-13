@@ -74,7 +74,7 @@ addTask();
 
 inboxBtn.addEventListener("click", () => {
     container.innerText = "Inbox"
-    container.innerHTML =    localStorage.getItem("Inbox",container.innerHTML);
+    container.innerHTML =  localStorage.getItem("Inbox",container.innerHTML);
 
 })
 
@@ -87,18 +87,19 @@ function addProject() {
         projects.appendChild(projects2)
         localStorage.setItem('project', projects2.innerHTML);
         // Check for saved wishlist items
-      
+ 
 
     })
     let saved = localStorage.getItem('project');
 if (saved) {
     projects2.innerHTML = saved;
 }
-projects2.addEventListener("click",function(e){
+
+ projects2.addEventListener("click",function( e){
+    container.innerHTML = localStorage.getItem("projects",container.innerHTML)
     console.log("you clicked this element:",e.target)
     container.innerText = e.target.innerText;
   })
- 
  
 }
 

@@ -66,10 +66,12 @@ input{
 .container-flex{
     display: flex;
     align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 300px;
 }
 #projectsDiv{
     display:flex;
