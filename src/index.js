@@ -96,9 +96,8 @@ if (saved) {
 }
 
  projects2.addEventListener("click",function( e){
-    container.innerHTML = localStorage.getItem("projects",container.innerHTML)
     console.log("you clicked this element:",e.target)
-    container.innerText = e.target.innerText;
+     
   })
  
 }
