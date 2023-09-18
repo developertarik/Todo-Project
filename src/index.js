@@ -17,10 +17,11 @@ const titleInput = document.getElementById("title")
 const a = document.createElement("a");
 const projects = document.getElementById("projectsDiv")
 const projectsBtn = document.getElementById("projectsBtn")
+const projectsInput = document.getElementById("projectsInput")
 const inboxBtn = document.getElementById("inboxBtn")
 const dat = document.createElement("input");
 container.innerText = "Inbox"
-
+const projectForm = document.getElementById("project-form")
 dat.setAttribute("type", "date");
 function addTask() {
 
@@ -82,10 +83,8 @@ function addProject() {
     const projects2 = document.createElement("li");
 
     projectsBtn.addEventListener("click", () => {
-        const projectName = prompt("What is the project name ?")
-        projects2.innerHTML += "<a href='#'>" + projectName + "</a>" + "<br>"
-        projects.appendChild(projects2)
-        localStorage.setItem('project', projects2.innerHTML);
+        projectForm.style.visibility = "visible";
+
         // Check for saved wishlist items
  
 
@@ -95,12 +94,18 @@ if (saved) {
     projects2.innerHTML = saved;
 }
 
- projects2.addEventListener("click",function( e){
-    console.log("you clicked this element:",e.target)
-     
-  })
+ projectForm.addEventListener("submit",(e)=>{
+
+ })
  
 }
 
+    projectsInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+          }
+    });
+
 addProject()
 
+ 
