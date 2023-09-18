@@ -7,14 +7,14 @@ body
     flex-direction: column;
     align-items: center;
     gap: 50px;
-   background-color: #053B50;
+   background-color: tomato;
 
 }
 
 .box{
     width: 100%;
     max-height: 100px;
-    color: black;
+    color: tomato;
     background-color: #EEEEEE;
  }
 body{
@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: column;
      gap: 5px;
-    border: 10px solid #183D3D;
+    border: 10px solid tomato;
     align-content: center;
     justify-content: center;
     margin-left: 500px;
@@ -48,7 +48,7 @@ input{
     gap: 20px;
     align-items: center;
     flex-wrap: nowrap;
-    background-color: #053B50;
+    background-color: tomato;
 }
 
 
@@ -71,7 +71,7 @@ input{
     text-align: center;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 300px;
+    margin-bottom: 300px;   
 }
 #projectsDiv{
     display:flex;
@@ -86,4 +86,6 @@ input{
 li{
     list-style: none;
 }
- 
+.inbox input{
+    padding:7%;
+}
