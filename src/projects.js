@@ -1,4 +1,4 @@
 export default function projects(){
-box.innerHTML = "";
-header1.innerText = "Project";
+container.innerHTML = "" 
+container.innerText = "projects";
 }

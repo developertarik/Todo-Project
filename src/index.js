@@ -1,3 +1,4 @@
+const todos = [];
 function Todo(title, description, dueDate, priority) {
     this.title = title;
     this.description = description;
@@ -24,42 +25,29 @@ container.innerText = "Inbox"
 const projectForm = document.getElementById("project-form")
 dat.setAttribute("type", "date");
 function addTask() {
-
     button.addEventListener("click", function () {
-        newTask = new Todo(title);
-
+        task = new Todo(title);
+        todos.push(task);
+        console.log(todos)
         const box = document.createElement("li")
         box.classList.add("box")
-
         analog.appendChild(div2)
         console.log(title.value);
-
         box.appendChild(dat)
         box.innerHTML += "<p class=`myTitle`>" + title.value + "</p>"
-
         const checkbox = document.createElement("button");
-
         checkbox.innerText = "Complete task!"
-
         checkbox.addEventListener("click", () => {
             box.remove();
             checkbox.remove();
         })
-
-
         box.appendChild(checkbox)
-
-        localStorage.setItem("Inbox",container.innerHTML)
+        localStorage.setItem("Inbox", container.innerHTML)
         analog.appendChild(div2)
         localStorage.setItem("contentDiv", container.innerHTML);
-
         container.appendChild(box)
-
         titleInput.value = "";
-
-
     });
-
     titleInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
@@ -75,7 +63,7 @@ addTask();
 
 inboxBtn.addEventListener("click", () => {
     container.innerText = "Inbox"
-    container.innerHTML =  localStorage.getItem("Inbox",container.innerHTML);
+    container.innerHTML = localStorage.getItem("Inbox", container.innerHTML);
 
 })
 
@@ -86,26 +74,25 @@ function addProject() {
         projectForm.style.visibility = "visible";
 
         // Check for saved wishlist items
- 
+
 
     })
     let saved = localStorage.getItem('project');
-if (saved) {
-    projects2.innerHTML = saved;
+    if (saved) {
+        projects2.innerHTML = saved;
+    }
+
+    projectForm.addEventListener("submit", (e) => {
+
+    })
+
 }
 
- projectForm.addEventListener("submit",(e)=>{
-
- })
- 
-}
-
-    projectsInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-          }
-    });
+projectsInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+    }
+});
 
 addProject()
 
- 
