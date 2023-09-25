@@ -77,10 +77,7 @@ function addProject() {
 
 
     })
-    let saved = localStorage.getItem('project');
-    if (saved) {
-        projects2.innerHTML = saved;
-    }
+    
 
     projectForm.addEventListener("submit", (e) => {
 
@@ -95,4 +92,3 @@ projectsInput.addEventListener("keydown", function (event) {
 });
 
 addProject()
-
