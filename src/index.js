@@ -91,9 +91,9 @@ function addProject() {
 
     })
     
-
+ 
  projects2.addEventListener("click",function( e){
-    console.log("you clicked this element:",e.target)
+    console.log("you clicked this elementt:",e.target)
      
   })
  
