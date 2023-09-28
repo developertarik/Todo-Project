@@ -1,1 +1,1 @@
-(()=>{const e=document.createElement("div"),t=document.getElementById("todo");document.createElement("h1"),document.getElementById("btn").addEventListener("click",(function(){const n=prompt("Başlık nedir? "),d=prompt("Açıklama nedir ? "),o=prompt("tarihi nedir?"),c=prompt("Önceliği nedir?"),i=document.createElement("input");i.setAttribute("type","checkbox"),console.log(n,d,o,c),e.innerHTML+=n,e.appendChild(i),t.appendChild(e)}))})();
+ 
