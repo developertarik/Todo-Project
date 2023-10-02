@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TODO</title>
-  <!--add css -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>To-Do </title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <script src="../src/index.js" defer></script>
-  <!--yapcaklar proje aç içine proje ekle ve projelerin içine görev ekle-->
-  <!--ve içine inbox ekle bir default proje olarak-->
-  <div class="navbar">
-    <h1 class="navbar-header">Todo project
+   
+    <script src="../src/index.js" defer></script>
+    <div id="todo">
+        <div class="header">
+            <img src="../dist/to-do-list.png" width="50px" alt="todo">
+            <h1 class="todo-header">Todolist</h1>
 
-    </h1>
-  </div>
-  <div id="analog">
-    <button id="deleteBtn">Delete todo</button>
-  </div>
+        </div>
+        <div class="inbox">
+            <form id="form" action="">
+                 <input maxlength="20" placeholder="Add task..." type="text" id="title">
+ 
+            </form>
+            <button id="btn">Add </button>
+
+        </div>
+    
+    </div>
+    <div class="container-flex">
+
+        <div id="projectsDiv">
+            <h4 href="">Projects</h4>
+
+            <ul class="projectList">
+
+                <a><img src="./cinema.png" alt="cinema" width="50px"> Today</a>
+                <a><img src="./home.png" alt="home" width="50px"> Home</a>
+            </ul>
+                    <div  >
+                    <form action="" id="project-form">
+ 
+                        <input id="projectsName" type="text"></input>
+                        <button id="projectsBtn" type="submit" id="btn">Add</button>
+                    </form>
+                   </div>
+                   <ul id="projects-List">
+                    <li>Inbox</li>
+                   </ul>
+         </div>
+    
+      
+        <div id="container">
+        
+    
+    </div>
+   
+</div>
 </body>
 </html>
