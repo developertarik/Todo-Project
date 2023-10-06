@@ -1,4 +1,4 @@
-    const todos = ["task1"];
+    const todos = ["test"];
     const projects = ["project1"];    
     const btn = document.getElementById("btn")
     const projectBtn = document.getElementById("pBtn")
@@ -11,8 +11,7 @@
         this.priority = priority;
 
     }
-    let todo = new Todo("Take a cold Shower","good task","goooooooooood","1")
-
+    let todo = new Todo("a");
     const projectList = document.getElementById("projectList")
     const newProjects = document.createElement("li")
     function dom() {
@@ -32,8 +31,12 @@
     }
     function addTask(){
         btn.addEventListener("click", function (e) {
-            todos.push(e.target.value)
+            
+            todo.title = e.target.value
+            todos.push(todo)
             console.log(todos)
+            projects.push(todos)
+
             const box = document.createElement("li")
             box.classList.add("box")
              const checkbox = document.createElement("button");
