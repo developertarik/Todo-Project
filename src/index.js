@@ -19,43 +19,40 @@
     }
  
 
-    let todo = new Todo("i love you theodin","thanks","29.05.2023",2);
-/*
-  const input = document.getElementById("title")
-            const a = document.createElement("a")
-            a.innerText = input.value
-            todo.title = input.value
-            const date = document.createElement("input");
-            date.setAttribute("type","date")
-            todo.dueDate = date
-             const box = document.createElement("li")
-            box.classList.add("box")
-            box.appendChild(a)
-            box.appendChild(checkbox)
-            localStorage.setItem("Inbox",container.innerHTML)
-            container.appendChild(box)    
-           
-*/
-
-function addTodo(){
-    //doms
-    const date = document.createElement("input");
-    date.setAttribute("type","date")
-    const checkbox = document.createElement("button");
-    checkbox.innerText = "Complete task!";
-
-    todo.dueDate = date
-
-    todos.push(todo) 
-    todo.title = input.value;
-    box.appendChild(checkbox)
-    box.appendChild(date)
-
-    console.log(todos)
-    container.appendChild(box)
+let todo = new Todo("i love you theodin","thanks","29.05.2023",2);
+ 
+const date = document.createElement("input");
+const checkbox = document.createElement("button");
+date.setAttribute("type","date")
+checkbox.innerText = "Complete task!";
     
+function addTask(){
+    btn.addEventListener("click", function (e) {
+        const input = document.getElementById("title")
+        const a = document.createElement("a")
+        a.innerText = input.value
+        todo.title = input.value
+        const date = document.createElement("input");
+        date.setAttribute("type","date")
+        todo.dueDate = date
+        todos.push(todo)
+        console.log(todos)
+        projects.push(todos)
+
+        const box = document.createElement("li")
+        box.classList.add("box")
+        box.appendChild(date)
+         const checkbox = document.createElement("button");
+        checkbox.innerText = "Complete task!";
+        box.appendChild(a)
+        box.appendChild(checkbox)
+        localStorage.setItem("Inbox",container.innerHTML)
+        container.appendChild(box)    
+       input.value = "" 
+    });
+   
+   
 }
 
 
-button.addEventListener("click",addTodo);
-
+addTask();
