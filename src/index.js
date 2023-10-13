@@ -19,7 +19,6 @@
     }
  
 
-let todo = new Todo("i love you theodin","thanks","29.05.2023",2);
  
 const date = document.createElement("input");
 const checkbox = document.createElement("button");
@@ -28,6 +27,8 @@ checkbox.innerText = "Complete task!";
     
 function addTask(){
     btn.addEventListener("click", function (e) {
+        let todo = new Todo("i love you theodin","thanks","29.05.2023",2);
+
         const input = document.getElementById("title")
         const a = document.createElement("a")
         a.innerText = input.value
