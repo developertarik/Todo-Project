@@ -1,11 +1,16 @@
+    //doms
     const todos = ["todo"];
-    const projects = ["project"];    
     const button = document.getElementById("btn")
     const container = document.getElementById("container")
     const box = document.createElement("div")
     const input = document.getElementById("title")
-
+    const date = document.createElement("input");
+    const checkbox = document.createElement("button");
+    date.setAttribute("type","date")
+    checkbox.innerText = "Complete task!";
     box.classList.add("box")
+    
+    //functions
     function Todo(title, description, dueDate, priority) {
         this.title = title;
         this.description = description;
@@ -13,16 +18,21 @@
         this.priority = priority;
 
     }
-    function Project(projectTitle,todo){
-        this.projectTitle = projectTitle;
-     }
+    
  
+ 
+    function holdProjects() {
+        const projects = [];
+      
+        function addProject(project) {
+          projects.push(project)
+        }
+      
+        return {
+          addProject
+        }
+      }
 
- 
-const date = document.createElement("input");
-const checkbox = document.createElement("button");
-date.setAttribute("type","date")
-checkbox.innerText = "Complete task!";
     
 function addTask(){
     btn.addEventListener("click", function (e) {
@@ -55,3 +65,47 @@ function addTask(){
 
 
 addTask();
+
+
+// ,projects.deleteProject(theProjectId)
+// What if we want to update a project: 
+// projects.updateProject(theProjectId, updatedProject)
+
+// const projects = ["project"];
+// Then you're pushing to it: 
+//     projects.push(todos);
+// Wouldn't it be nice if you could simply call a method with a nice name that does what you intend it to do? Something like this: 
+// projects.addTodos(todos)
+
+
+/*function holdProjects() {
+  const projects = [];
+
+  function addProject(project) {
+    projects.push(project);
+  }
+
+  function getProject(projectId) {
+
+  }
+
+  function getAllProjects() {
+
+  }
+
+  function deleteProject(projectId) {
+
+  }
+
+  function updateProject(projectId, updatedProject) {
+
+  }
+
+  return {
+    addProject,
+    getProject,
+    getAllProjects,
+    deleteProject,
+    updateProject
+  };
+}*/
