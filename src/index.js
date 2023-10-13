@@ -15,8 +15,7 @@
     }
     function Project(projectTitle,todo){
         this.projectTitle = projectTitle;
-        this.todo = todo;
-    }
+     }
  
 
  
@@ -27,8 +26,7 @@ checkbox.innerText = "Complete task!";
     
 function addTask(){
     btn.addEventListener("click", function (e) {
-        let todo = new Todo("i love you theodin","thanks","29.05.2023",2);
-
+        let todo = new Todo("i love you theodin");
         const input = document.getElementById("title")
         const a = document.createElement("a")
         a.innerText = input.value
