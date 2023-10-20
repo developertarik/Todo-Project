@@ -1,5 +1,6 @@
     //doms
     const todos = ["todo"];
+    const projects = ["Today","Sports"]
     const button = document.getElementById("btn")
     const container = document.getElementById("container")
     const box = document.createElement("div")
@@ -9,6 +10,7 @@
     date.setAttribute("type","date")
     checkbox.innerText = "Complete task!";
     box.classList.add("box")
+    const projectsDiv =  document.getElementById("projectsDiv")
     
     //functions
     function Todo(title, description, dueDate, priority) {
@@ -19,22 +21,15 @@
 
     }
     
- 
- 
-    function holdProjects() {
-        const projects = [];
-      
-        function addProject(project) {
-          projects.push(project)
-        }
-      
-        return {
-          addProject
-        }
-      }
-
-    
-function addTask(){
+ function addProject(){
+    for (let i = 0; i < projects.length; i++) {
+        const element = projects[i];
+        projectsDiv.innerHTML+="<a class='element'>"+ element +"</a>"
+        
+    }
+ }
+ addProject();
+ function addTask(){
     btn.addEventListener("click", function (e) {
         let todo = new Todo("i love you theodin");
         const input = document.getElementById("title")
@@ -46,10 +41,9 @@ function addTask(){
         todo.dueDate = date
         todos.push(todo)
         console.log(todos)
-        projects.push(todos)
-
+ 
         const box = document.createElement("li")
-        box.classList.add("box")
+         box.classList.add("box")
         box.appendChild(date)
          const checkbox = document.createElement("button");
         checkbox.innerText = "Complete task!";
@@ -63,49 +57,16 @@ function addTask(){
    
 }
 
-
-addTask();
-
-
-// ,projects.deleteProject(theProjectId)
-// What if we want to update a project: 
-// projects.updateProject(theProjectId, updatedProject)
-
-// const projects = ["project"];
-// Then you're pushing to it: 
-//     projects.push(todos);
-// Wouldn't it be nice if you could simply call a method with a nice name that does what you intend it to do? Something like this: 
-// projects.addTodos(todos)
-
-
-/*function holdProjects() {
-  const projects = [];
-
-  function addProject(project) {
-    projects.push(project);
+function deleteTask(){
+  checkbox.addEventListener("click",(e)=>{
+      box.remove();
+      button.remove();
+      todos.pop();
+ 
+  })
   }
+  
+ 
+  addTask();
+deleteTask();
 
-  function getProject(projectId) {
-
-  }
-
-  function getAllProjects() {
-
-  }
-
-  function deleteProject(projectId) {
-
-  }
-
-  function updateProject(projectId, updatedProject) {
-
-  }
-
-  return {
-    addProject,
-    getProject,
-    getAllProjects,
-    deleteProject,
-    updateProject
-  };
-}*/

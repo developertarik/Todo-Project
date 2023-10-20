@@ -94,12 +94,14 @@ input{
  
 #projectsDiv,.inbocx{
     border: 1px solid red;
-    width: 17%;
+    width: 40%;
     gap: 50px;
+    height: 500px;
     display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    flex-wrap: wrap;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-direction: column;
     justify-content: center;
    
 }
@@ -129,4 +131,8 @@ input{
 }
 a:focus{
     cursor: pointer;
+}
+.element{
+    color:white;
+    font-size: xx-large;
 }
