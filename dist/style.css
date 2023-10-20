@@ -94,8 +94,8 @@ input{
  
 #projectsDiv,.inbocx{
     border: 1px solid red;
-    width: 40%;
-    gap: 50px;
+     width: 20%;
+    gap: 20px;
     height: 500px;
     display: flex;
     align-content: center;
@@ -133,6 +133,12 @@ a:focus{
     cursor: pointer;
 }
 .element{
-    color:white;
+    color:black;
     font-size: xx-large;
+    background-color: rgb(252, 253, 251);
+    display: flex;
+}
+.element:hover  {
+    background-color: black;
+    color: white;
 }

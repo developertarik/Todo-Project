@@ -7,11 +7,12 @@
     const input = document.getElementById("title")
     const date = document.createElement("input");
     const checkbox = document.createElement("button");
+    const pBtn = document.getElementById("pBtn")
     date.setAttribute("type","date")
     checkbox.innerText = "Complete task!";
     box.classList.add("box")
     const projectsDiv =  document.getElementById("projectsDiv")
-    
+     
     //functions
     function Todo(title, description, dueDate, priority) {
         this.title = title;
@@ -20,17 +21,30 @@
         this.priority = priority;
 
     }
-    
- function addProject(){
-    for (let i = 0; i < projects.length; i++) {
-        const element = projects[i];
-        projectsDiv.innerHTML+="<a class='element'>"+ element +"</a>"
-        
+    function Project(pTitle){
+        this.pTitle = pTitle
     }
- }
- addProject();
+    
+ 
+   
+function addProject(){
+    pBtn.addEventListener("click",function(e) {
+        let project = new Project("i love you theodin");
+        const pInput = document.getElementById("projectsName")
+        const b = document.createElement("a")
+        b.innerText = pInput.value
+        project.pTitle = pInput.value
+         projects.push(project)
+        console.log(projects)
+ 
+        const projectBox = document.createElement("li")
+         projectBox.appendChild(b)
+         projectsDiv.appendChild(projectBox)    
+       pInput.value = "" 
+    })
+}
  function addTask(){
-    btn.addEventListener("click", function (e) {
+    button.addEventListener("click", function (e) {
         let todo = new Todo("i love you theodin");
         const input = document.getElementById("title")
         const a = document.createElement("a")
@@ -70,3 +84,4 @@ function deleteTask(){
   addTask();
 deleteTask();
 
+addProject();
